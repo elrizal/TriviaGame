@@ -10,7 +10,7 @@
 		background: linear-gradient(to right, #C4E0E5, #4CA1AF);">
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container" align="center">
-				<h1 style="font-size: 30px; text-transform: uppercase;font-family: 'Secular One', sans-serif;">Useless Dog-Trivia Game!</h1>
+				<h1 style="font-size: 30px; text-transform: uppercase;font-family: 'Secular One', sans-serif;">Dog-Trivia Game!</h1>
 				<h3>Your time:
 				<div id="show-time">00:00</div> </h3>   </div>
 			</nav>
@@ -26,34 +26,45 @@
 									<button id="start" style="background: #1fc396; font-size: 25px; width: 50%; padding: 25px; color: white;text-transform: uppercase;">Start</button>
 									<div id="show-quiz"><p>
 										<h3>1. Which continent have dogs been thought to have descended from wolves at least 14,000 years ago?"</h3>
-										<button id="correct-answer">A. Southeast Asia</button> <button id="incorrect-answer">B. South America</button>
-										<button id="incorrect-answer">C. East Asia</button>
+										<button id="correct-answer" class="user-input">A. Southeast Asia</button> <button id="incorrect-answer">B. South America</button>
+
+										<button id="incorrect-answer" class="user-input">C. East Asia</button>
 										<h3>2. What is the tallest dog breed?</h3>
-										<button id="incorrect-answer">A. German Shepard</button> <button id="correct-answer">B. Irish Wolfhound</button>
-										<button id="incorrect-answer">C. Mountain Dog</button>
+										<button id="incorrect-answer" class="user-input"> A. German Shepard</button> <button id="correct-answer">B. Irish Wolfhound</button>
+										<button id="incorrect-answer" class="user-input">C. Mountain Dog</button>
+
 										<h3>3. What breed was developed to be 'an all purpose' dog?</h3>
-										<button id="correct-answer">A. German Shepard</button> <button id="correct-answer">B. Rottweiler</button>
-										<button id="incorrect-answer">C. Mountain Dog</button>
+										<button id="correct-answer" class="user-input">A. German Shepard</button> <button id="correct-answer">B. Rottweiler</button>
+										<button id="incorrect-answer" class="user-input">C. Mountain Dog</button>
 										
 										<h3>4. What breed was developed to be 'an all purpose' dog?</h3>
-										<button id="correct-answer">A. German Shepard</button> <button id="correct-answer">B. Rottweiler</button>
-										<button id="incorrect-answer">C. Mountain Dog</button>
+										<button id="correct-answer" class="user-input">A. German Shepard</button> <button id="correct-answer">B. Rottweiler</button>
+										<button id="incorrect-answer" class="user-input">C. Mountain Dog</button>
+
 										<h3>5. True/False: There are no completely hypoallergenic dogs</h3>
-										<button id="correct-answer">True</button> <button id="incorrect-answer">False</button>
+										<button id="correct-answer" class="user-input">True</button> <button id="incorrect-answer" class="user-input">False</button>
+
 										<h3>6. The ____has been the most popular breed of dog in the United States since 1990</h3>
-										<button id="incorrect-answer">A. Welsh Corgi</button> <button id="incorrect-answer">B. Yorkie</button>
-										<button id="incorrect-answer">C. Labrador Retriever</button>
+										<button id="incorrect-answer" class="user-input">A. Welsh Corgi</button> <button id="incorrect-answer" class="user-input">B. Yorkie</button>
+										<button id="incorrect-answer" class="user-input">C. Labrador Retriever</button>
+
 										<h3>7. What country did the poodle originate from?</h3>
-										<button id="incorrect-answer">A. France</button> <button id="incorrect-answer">B. Belgium</button> <button id="correct-answer">C. Germany</button>
+										<button id="incorrect-answer" class="user-input">A. France</button> <button id="incorrect-answer" class="user-input">B. Belgium</button> <button id="correct-answer" class="user-input">C. Germany</button>
+
 										<h3>8. What breed is NOT considered one of the most intelligent dog breeds?</h3>
-										<button id="incorrect-answer">A. Doberman Pinscher</button> <button id="incorrect-answer">B. Border Collie</button> <button id="correct-answer">C. Bulldogs</button>
+										<button id="incorrect-answer" class="user-input">A. Doberman Pinscher</button> <button id="incorrect-answer">B. Border Collie</button> <button id="correct-answer" class="user-input">C. Bulldogs</button>
+
 										<h3>9. Which writer is credited as being the first person to write about dogs?</h3>
-										<button id="correct-answer">A. Homer</button> <button id="incorrect-answer">William Shakespeare</button> <button id="incorrect-answer">Aristotle</button>
+										<button id="correct-answer">A. Homer</button> <button id="incorrect-answer" class="user-input">William Shakespeare</button> <button id="incorrect-answer" class="user-input">Aristotle</button>
+										
 										<h3>10. The average dog owner in the United States will spend about ____ per dog in vet visits, grooming, food etc.</h3>
-										<button id="incorrect-answer">A. $920</button> <button id="correct-answer">B. $1,425</button> <button id="incorrect-answer">C. $2,000</button><br><br>
+										<button id="incorrect-answer" class="user-input">A. $920</button> <button id="correct-answer" class="user-input">B. $1,425</button> <button id="incorrect-answer" class="user-input">C. $2,000</button><br><br>
+
 										<button id="stop" style="background: #1fc396; font-size: 25px; width: 50%; padding: 25px; color: white;text-transform: uppercase;">Finish</button>
 									</p>
-									<div id="show-answers"><h2>You got <div id="userScore">-</div> out of ten!</h2></div>
+									<div id="show-answers"><h2>You got <div id="user-score">-</div> out of ten!</h2>
+									<button id="reset">Start over?</button> 
+								</div>
 								</div>
 							</div>
 						</div>

@@ -1,21 +1,15 @@
 
-//later, use (questions[0]) to get objects from the array
-
-var userScore = 0;
-var userEntry = 0;
-
-$("#show-answers").hide();
-$('#show-quiz').hide();
-
 window.onload = function() {
 	$("#stop").on("click", timeLimit.stop);
-	$("#reset").on("click", timeLimit.reset); //to be used at the end of the quiz
+	$("#reset").on("click", timeLimit.reset); 
 	$("#start").on("click", timeLimit.start);
-
-
+	$("#show-answers").hide();
+	$('#show-quiz').hide();
 };
+	
 var intervalId;
-var clockRunning = false;
+var clockRunning = false;	
+
 setTimeout(timeUp, 1000 * 10);
 
 var timeLimit = {
@@ -27,7 +21,7 @@ var timeLimit = {
 	},
 
 	start: function() {
-			$("#show-quiz").show(timeLimit.start);
+		$("#show-quiz").show(timeLimit.start);
 
 		if (!clockRunning) {
 			intervalId = setInterval(timeLimit.count, 1000);
@@ -35,6 +29,8 @@ var timeLimit = {
 		}
 	},
 	stop: function() {
+	$("#show-answers").show(timeLimit.start);
+
    	 clearInterval(intervalId);
    	 clockRunning = false;
   },
@@ -72,6 +68,8 @@ function timeUp() {
 
 	alert("Time's up!");
 	$("#show-answers").show();
+	$("#user-score").show();
+
 	if (timeLimit === 0) {
 		stop();
 	}
@@ -79,8 +77,16 @@ function timeUp() {
 
 
 //	ANSWER SELECTS:
-// may write: IF array quetions[0] === array answers [0]
-//then correct message on click.
-// if array quetions[0] === array wrongAnswers [0] then incorrect
-// must have an event trigger for the user to select options, which will then
-//be compared to the answer
+var userScore = 0;
+
+$(".user-input").on("click", function() {
+
+ if ($("#correct-answer").on("click", timeLimit.stop)) {
+    	userScore += 1;
+    	console.log(userScore);
+  }
+else {
+    	userScore -= 1;
+    	console.log(userScore);
+  }
+});
