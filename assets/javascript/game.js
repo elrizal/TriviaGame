@@ -3,16 +3,17 @@
 
 var userScore = 0;
 var userEntry = 0;
-	var displayAnswers= $("#show-answers").show();
-	var hideAnswers= $("#show-answers").hide();
 
+$("#show-answers").hide();
+$('#show-quiz').hide();
 
 window.onload = function() {
+	$("#stop").on("click", timeLimit.stop);
 	$("#reset").on("click", timeLimit.reset); //to be used at the end of the quiz
 	$("#start").on("click", timeLimit.start);
-	$("#stop").on("click", timeLimit.start);
-};
 
+
+};
 var intervalId;
 var clockRunning = false;
 setTimeout(timeUp, 1000 * 10);
@@ -26,8 +27,9 @@ var timeLimit = {
 	},
 
 	start: function() {
-		if (!clockRunning) {
+			$("#show-quiz").show(timeLimit.start);
 
+		if (!clockRunning) {
 			intervalId = setInterval(timeLimit.count, 1000);
 			clockRunning = true;
 		}
@@ -63,19 +65,19 @@ var timeLimit = {
 
 function timeUp() {
 	timeLimit--;
-
+	 
 	console.log("done");
-
-	//$('#main-space').removeClass('status-on').addClass('status-off');
 	$("#show-quiz").empty();
 	//$(".panel panel-default").append();
 
-	alert("Time up!");
-
+	alert("Time's up!");
+	$("#show-answers").show();
 	if (timeLimit === 0) {
 		stop();
 	}
 }
+
+
 //	ANSWER SELECTS:
 // may write: IF array quetions[0] === array answers [0]
 //then correct message on click.
